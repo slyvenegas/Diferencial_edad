@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');</style>
+    <title>Calculo de edad:</title>
+</head>
+<header>
+    <h2>¡COMPAREMOS TU EDAD!</h2>
+</header>
+<body>
+    
+    <div class="contenedor">
+        <form>
+            <label class="lblEdad" for="edad1">INGRESA TU EDAD:</label>
+            <input type="number" id="edad1" name="edad1" required>
+
+            <label class="lblEdad" for="edad2">¿CON CUÁL LA COMPARAMOS?:</label>
+            <input type="number" id="edad2" name="edad2" required>
+            <br>
+            <button type="button" onclick="calcularDiferencia()">¡CALCULA!</button>
+            <input class="reset" type="reset" value="Limpiar">
+        </form>
+
+        <div class="total">  
+            <p><span id="resultado"></span></p>
+        </div>
+        <div>
+            <img src="/img/logo-blanco.png" alt="">
+            <p class="copyright">&copy Copyright BRINF 2023</p>
+        </div>
+    </div>
+
+    <script>
+        function calcularDiferencia() {
+            var edad1 = parseFloat(document.getElementById("edad1").value);
+            var edad2 = parseFloat(document.getElementById("edad2").value);
+
+            var resultado = edad1 - edad2;
+        
+            document.getElementById("resultado").innerHTML = "La diferencia de edad es: " + resultado;
+        }
+    </script>
+</body>
+</html>
+
